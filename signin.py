@@ -38,20 +38,7 @@ with open('cat_id.json', 'r', encoding='UTF-8') as f:
 
 # 企业微信群机器人 推送
 def text_push(msg):
-    text_url = os.getenv('WECHAT_ROBOT_URL')
-    if not text_url:
-        raise ValueError("环境变量 WECHAT_ROBOT_URL 未设置")
-    text_data = {
-        "msgtype": "markdown",
-        "markdown": {
-            "content": msg,
-            "mentioned_list": ["@all"],
-            "mentioned_mobile_list": ["@all"]
-        }
-    }
-    requests.post(url=text_url, json=text_data)
-
-
+  pass
 
 class HuluxiaSignin:
     """
